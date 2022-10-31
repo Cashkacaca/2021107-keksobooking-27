@@ -1,5 +1,4 @@
 import './offer-card.js';
-import { disablingForm } from './form.js';
+import './form.js';
 
-// выключаем форму
-disablingForm();
+
