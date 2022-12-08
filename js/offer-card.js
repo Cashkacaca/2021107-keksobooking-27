@@ -1,8 +1,6 @@
 import { declineNumber } from './utils.js';
 
 
-const TYPES_OF_HOUSES = ['bungalow', 'flat', 'hotel', 'house', 'palace'];
-
 const TypeOfHousing = {
   flat: 'Квартира',
   bungalow: 'Бунгало',
@@ -11,27 +9,12 @@ const TypeOfHousing = {
   hotel: 'Отель'
 };
 
-const { flat, bungalow, house, palace, hotel } = TypeOfHousing;
 const [комната, комнаты, комнат, гость, гостя, гостей] = ['комната', 'комнаты', 'комнат', 'гость', 'гостя', 'гостей'];
 
 
 const patternCardSticker = document.querySelector('#card').content.querySelector('.popup');
 
-
-const getSortRooms = (typeHouse) => {
-  switch (typeHouse) {
-    case TYPES_OF_HOUSES[1]:
-      return flat;
-    case TYPES_OF_HOUSES[0]:
-      return bungalow;
-    case TYPES_OF_HOUSES[3]:
-      return house;
-    case TYPES_OF_HOUSES[4]:
-      return palace;
-    case TYPES_OF_HOUSES[2]:
-      return hotel;
-  }
-};
+const getSortRooms = (typeHouse) => TypeOfHousing[typeHouse];
 
 
 const deleteUnnecessaryElements = (fullArray, needArray) => {
